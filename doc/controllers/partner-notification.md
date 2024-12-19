@@ -54,7 +54,6 @@ result = partner_notification_controller.partner_token(
     client_id,
     client_secret
 )
-print(result)
 ```
 
 ## Errors
@@ -102,10 +101,9 @@ body = FinaliseFuelingRequest(
     mpp_transaction_id='000000006KCC'
 )
 
-result = partner_notification_controller.finalise_fueling(
+partner_notification_controller.finalise_fueling(
     body=body
 )
-print(result)
 ```
 
 ## Errors
@@ -145,10 +143,9 @@ body = CancelFuelingRequest(
     reason_code='CANCELLED'
 )
 
-result = partner_notification_controller.cancel_fueling(
+partner_notification_controller.cancel_fueling(
     body=body
 )
-print(result)
 ```
 
 ## Errors

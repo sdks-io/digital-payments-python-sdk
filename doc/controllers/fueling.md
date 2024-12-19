@@ -53,7 +53,6 @@ result = fueling_controller.mpp_token(
     client_id,
     client_secret
 )
-print(result)
 ```
 
 ## Errors
@@ -99,14 +98,12 @@ body = PrepareFuelingRequest(
     station_id='9955',
     pump_id='1',
     source_application='PARTNER_APP_EXAMPLE',
-    payment_details=[
-        PaymentDetailsItems(
-            payment_method_id='euroShell',
-            payment_properties=PaymentProperties(
-                card_identifier='98e4ffd3-4146-4e94-8445-e02f4ce87a77'
-            )
+    payment_details=PaymentDetails(
+        payment_method_id='euroShell',
+        payment_properties=PaymentProperties(
+            card_identifier='98e4ffd3-4146-4e94-8445-e02f4ce87a77'
         )
-    ],
+    ),
     loyalty_details=[
         LoyaltyDetails(
             loyalty_id='70043201060148830',
@@ -120,7 +117,6 @@ result = fueling_controller.mpp_prepare_fueling(
     currency,
     body
 )
-print(result)
 ```
 
 ## Errors
@@ -157,8 +153,7 @@ def mpp_cancel_fueling(self,
 ```python
 mpp_transaction_id = '000000001C48'
 
-result = fueling_controller.mpp_cancel_fueling(mpp_transaction_id)
-print(result)
+fueling_controller.mpp_cancel_fueling(mpp_transaction_id)
 ```
 
 ## Errors

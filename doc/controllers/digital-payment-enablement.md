@@ -47,7 +47,6 @@ body = MobilePaymentRegistrationRequest(
 )
 
 result = digital_payment_enablement_controller.mpay_v_1_tokens_ref_put(body)
-print(result)
 ```
 
 ## Errors

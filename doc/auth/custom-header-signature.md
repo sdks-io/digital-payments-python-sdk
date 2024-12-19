@@ -9,7 +9,7 @@ Documentation for accessing and setting credentials for MppToken.
 
 | Name | Type | Description | Getter |
 |  --- | --- | --- | --- |
-| Authorization | `str` | Digital Payments access token ([How to obtain Digital Payments access token?](page:guided-walkthrough/walkthrough1)) | `authorization` |
+| Authorization | `str` | Access token to be passed for Mobile Payment Platform Authentication ([How to obtain Digital Payments access token?](page:guided-walkthrough/walkthrough1)) | `authorization` |
 
 
 
@@ -22,7 +22,7 @@ Documentation for accessing and setting credentials for MppToken.
 You must provide credentials in the client as shown in the following code snippet.
 
 ```python
-client = ShellevClient(
+client = ShellsmartpayapiClient(
     mpp_token_credentials=MppTokenCredentials(
         authorization='Authorization'
     )

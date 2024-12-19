@@ -48,7 +48,6 @@ result = shell_api_platform_security_authentication_controller.oauth_token_post(
     client_id,
     client_secret
 )
-print(result)
 ```
 
 ## Errors

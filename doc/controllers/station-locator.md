@@ -59,7 +59,6 @@ result = station_locator_controller.stationlocator_v_1_stations_get_around_locat
     lat,
     radius
 )
-print(result)
 ```
 
 ## Errors
