@@ -11,7 +11,7 @@
 |  --- | --- | --- | --- |
 | `access_token` | `str` | Optional | It is the token used in the requests that required to authenticate an user. |
 | `token_type` | `str` | Optional | type of token provided<br>**Default**: `'bearer'` |
-| `expires_in` | `long\|int` | Optional | validity of the access token in seconds |
+| `expires_in` | `int` | Optional | validity of the access token in seconds |
 | `scope` | `str` | Optional | scope for the authentication protocol<br>**Default**: `'basic openid'` |
 
 ## Example (as JSON)

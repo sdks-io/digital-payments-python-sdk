@@ -42,5 +42,5 @@ class StationLocatorInternalServerErrorException(APIException):
         base_str = super().__str__()
         return (f'{self.__class__.__name__}('
                 f'{base_str[base_str.find("(") + 1:-1]}, '
-                f'error_code={self.error_code!s}, '
-                f'error_description={self.error_description!s})')
+                f'error_code={(self.error_code if hasattr(self, "error_code") else None)!s}, '
+                f'error_description={(self.error_description if hasattr(self, "error_description") else None)!s})')

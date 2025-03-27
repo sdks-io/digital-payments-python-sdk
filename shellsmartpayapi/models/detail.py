@@ -13,8 +13,6 @@ class Detail(object):
 
     """Implementation of the 'Detail' model.
 
-    TODO: type model description here.
-
     Attributes:
         errorcode (str): The error code.
 
@@ -62,8 +60,8 @@ class Detail(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'errorcode={self.errorcode!r})')
+                f'errorcode={(self.errorcode if hasattr(self, "errorcode") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'errorcode={self.errorcode!s})')
+                f'errorcode={(self.errorcode if hasattr(self, "errorcode") else None)!s})')

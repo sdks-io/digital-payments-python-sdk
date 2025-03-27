@@ -12,8 +12,6 @@ class PaymentEnablementResponse(object):
 
     """Implementation of the 'PaymentEnablementResponse' model.
 
-    TODO: type model description here.
-
     Attributes:
         dpan_last_4 (str): DPan Last number
 

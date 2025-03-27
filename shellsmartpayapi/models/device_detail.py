@@ -13,8 +13,6 @@ class DeviceDetail(object):
 
     """Implementation of the 'DeviceDetail' model.
 
-    TODO: type model description here.
-
     Attributes:
         device_id (str): This is the mobile device’s unique ID (Vendor ID for
             iOS vs. Android ID for Android). This is only used for
@@ -102,14 +100,14 @@ class DeviceDetail(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'device_id={self.device_id!r}, '
-                f'model={self.model!r}, '
-                f'os_version={self.os_version!r}, '
-                f'other_device_information={self.other_device_information!r})')
+                f'device_id={(self.device_id if hasattr(self, "device_id") else None)!r}, '
+                f'model={(self.model if hasattr(self, "model") else None)!r}, '
+                f'os_version={(self.os_version if hasattr(self, "os_version") else None)!r}, '
+                f'other_device_information={(self.other_device_information if hasattr(self, "other_device_information") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'device_id={self.device_id!s}, '
-                f'model={self.model!s}, '
-                f'os_version={self.os_version!s}, '
-                f'other_device_information={self.other_device_information!s})')
+                f'device_id={(self.device_id if hasattr(self, "device_id") else None)!s}, '
+                f'model={(self.model if hasattr(self, "model") else None)!s}, '
+                f'os_version={(self.os_version if hasattr(self, "os_version") else None)!s}, '
+                f'other_device_information={(self.other_device_information if hasattr(self, "other_device_information") else None)!s})')

@@ -37,7 +37,8 @@ class StationLocatorController(BaseController):
                                                         offer_code=None,
                                                         n=None,
                                                         amenities=None,
-                                                        countries=None):
+                                                        countries=None,
+                                                        mtype=None):
         """Does a GET request to /SiteData/v1/stations.
 
         Returns all sites within specified radius of specified GPS location.
@@ -64,6 +65,17 @@ class StationLocatorController(BaseController):
             countries (List[str], optional): This enables requestor to filter
                 locations based on one or more Countries (i.e. by country
                 codes).
+            mtype (TypeEnum, optional): All fuel stations are of at least one
+                Type, indicating whether it is Shell-branded or not, and if
+                the station can be used by trucks. Note that a station can
+                have more than one Type (e.g. Shell retail sites (Type=0) can
+                also be truck friendly (Type=2)).   Type values are as
+                follows:    * 0 = Shell owned/branded stations that are not
+                also Type=2 or Type=3   * 1 = Partner stations accepting Shell
+                Card   * 2 = Shell owned/branded stations that are truck
+                friendly but not Type=3   * 3 = Shell owned/branded stations
+                that are truck only   <br/>**When type is not provided, API
+                will return type 0 and 2 only.**
 
         Returns:
             AroundLocationArray: Response from the API. OK
@@ -104,6 +116,9 @@ class StationLocatorController(BaseController):
             .query_param(Parameter()
                          .key('countries')
                          .value(countries))
+            .query_param(Parameter()
+                         .key('type')
+                         .value(mtype))
             .header_param(Parameter()
                           .key('accept')
                           .value('application/json'))

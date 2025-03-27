@@ -12,8 +12,6 @@ class LoyaltyDetails(object):
 
     """Implementation of the 'LoyaltyDetails' model.
 
-    TODO: type model description here.
-
     Attributes:
         loyalty_id (str): The user’s Loyalty card number. Although this is
             optional the expectation is that if this is specified then

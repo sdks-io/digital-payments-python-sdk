@@ -45,4 +45,4 @@ class MppAccesTokenErrorResponseException(APIException):
                 f'{base_str[base_str.find("(") + 1:-1]}, '
                 f'error={self.error!s}, '
                 f'error_code={self.error_code!s}, '
-                f'error_description={self.error_description!s})')
+                f'error_description={(self.error_description if hasattr(self, "error_description") else None)!s})')

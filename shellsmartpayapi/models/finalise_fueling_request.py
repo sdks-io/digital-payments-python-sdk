@@ -15,22 +15,20 @@ class FinaliseFuelingRequest(object):
 
     """Implementation of the 'finaliseFuelingRequest' model.
 
-    TODO: type model description here.
-
     Attributes:
-        site_name (str): TODO: type description here.
-        timestamp (long|int): TODO: type description here.
-        volume_quantity (float): TODO: type description here.
-        volume_unit (str): TODO: type description here.
-        final_price (float): TODO: type description here.
-        currency (str): TODO: type description here.
-        status (str): TODO: type description here.
-        site_address (str): TODO: type description here.
-        original_price (float): TODO: type description here.
-        discount (float): TODO: type description here.
-        payment (Payment): TODO: type description here.
-        products (List[Product]): TODO: type description here.
-        mpp_transaction_id (str): TODO: type description here.
+        site_name (str): The model property of type str.
+        timestamp (int): The model property of type int.
+        volume_quantity (float): The model property of type float.
+        volume_unit (str): The model property of type str.
+        final_price (float): The model property of type float.
+        currency (str): The model property of type str.
+        status (str): The model property of type str.
+        site_address (str): The model property of type str.
+        original_price (float): The model property of type float.
+        discount (float): The model property of type float.
+        payment (Payment): The model property of type Payment.
+        products (List[Product]): The model property of type List[Product].
+        mpp_transaction_id (str): The model property of type str.
 
     """
 
@@ -164,32 +162,32 @@ class FinaliseFuelingRequest(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'site_name={self.site_name!r}, '
-                f'timestamp={self.timestamp!r}, '
-                f'volume_quantity={self.volume_quantity!r}, '
-                f'volume_unit={self.volume_unit!r}, '
-                f'final_price={self.final_price!r}, '
-                f'currency={self.currency!r}, '
-                f'status={self.status!r}, '
-                f'site_address={self.site_address!r}, '
-                f'original_price={self.original_price!r}, '
-                f'discount={self.discount!r}, '
-                f'payment={self.payment!r}, '
-                f'products={self.products!r}, '
-                f'mpp_transaction_id={self.mpp_transaction_id!r})')
+                f'site_name={(self.site_name if hasattr(self, "site_name") else None)!r}, '
+                f'timestamp={(self.timestamp if hasattr(self, "timestamp") else None)!r}, '
+                f'volume_quantity={(self.volume_quantity if hasattr(self, "volume_quantity") else None)!r}, '
+                f'volume_unit={(self.volume_unit if hasattr(self, "volume_unit") else None)!r}, '
+                f'final_price={(self.final_price if hasattr(self, "final_price") else None)!r}, '
+                f'currency={(self.currency if hasattr(self, "currency") else None)!r}, '
+                f'status={(self.status if hasattr(self, "status") else None)!r}, '
+                f'site_address={(self.site_address if hasattr(self, "site_address") else None)!r}, '
+                f'original_price={(self.original_price if hasattr(self, "original_price") else None)!r}, '
+                f'discount={(self.discount if hasattr(self, "discount") else None)!r}, '
+                f'payment={(self.payment if hasattr(self, "payment") else None)!r}, '
+                f'products={(self.products if hasattr(self, "products") else None)!r}, '
+                f'mpp_transaction_id={(self.mpp_transaction_id if hasattr(self, "mpp_transaction_id") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'site_name={self.site_name!s}, '
-                f'timestamp={self.timestamp!s}, '
-                f'volume_quantity={self.volume_quantity!s}, '
-                f'volume_unit={self.volume_unit!s}, '
-                f'final_price={self.final_price!s}, '
-                f'currency={self.currency!s}, '
-                f'status={self.status!s}, '
-                f'site_address={self.site_address!s}, '
-                f'original_price={self.original_price!s}, '
-                f'discount={self.discount!s}, '
-                f'payment={self.payment!s}, '
-                f'products={self.products!s}, '
-                f'mpp_transaction_id={self.mpp_transaction_id!s})')
+                f'site_name={(self.site_name if hasattr(self, "site_name") else None)!s}, '
+                f'timestamp={(self.timestamp if hasattr(self, "timestamp") else None)!s}, '
+                f'volume_quantity={(self.volume_quantity if hasattr(self, "volume_quantity") else None)!s}, '
+                f'volume_unit={(self.volume_unit if hasattr(self, "volume_unit") else None)!s}, '
+                f'final_price={(self.final_price if hasattr(self, "final_price") else None)!s}, '
+                f'currency={(self.currency if hasattr(self, "currency") else None)!s}, '
+                f'status={(self.status if hasattr(self, "status") else None)!s}, '
+                f'site_address={(self.site_address if hasattr(self, "site_address") else None)!s}, '
+                f'original_price={(self.original_price if hasattr(self, "original_price") else None)!s}, '
+                f'discount={(self.discount if hasattr(self, "discount") else None)!s}, '
+                f'payment={(self.payment if hasattr(self, "payment") else None)!s}, '
+                f'products={(self.products if hasattr(self, "products") else None)!s}, '
+                f'mpp_transaction_id={(self.mpp_transaction_id if hasattr(self, "mpp_transaction_id") else None)!s})')

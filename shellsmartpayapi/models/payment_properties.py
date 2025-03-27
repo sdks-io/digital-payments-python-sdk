@@ -166,24 +166,24 @@ class PaymentProperties(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'payment_type={self.payment_type!r}, '
-                f'client_metadata_id={self.client_metadata_id!r}, '
-                f'token={self.token!r}, '
-                f'identifier={self.identifier!r}, '
-                f'network={self.network!r}, '
+                f'payment_type={(self.payment_type if hasattr(self, "payment_type") else None)!r}, '
+                f'client_metadata_id={(self.client_metadata_id if hasattr(self, "client_metadata_id") else None)!r}, '
+                f'token={(self.token if hasattr(self, "token") else None)!r}, '
+                f'identifier={(self.identifier if hasattr(self, "identifier") else None)!r}, '
+                f'network={(self.network if hasattr(self, "network") else None)!r}, '
                 f'card_identifier={self.card_identifier!r}, '
-                f'odometer={self.odometer!r}, '
-                f'fleet_id={self.fleet_id!r}, '
-                f'external_ref_id={self.external_ref_id!r})')
+                f'odometer={(self.odometer if hasattr(self, "odometer") else None)!r}, '
+                f'fleet_id={(self.fleet_id if hasattr(self, "fleet_id") else None)!r}, '
+                f'external_ref_id={(self.external_ref_id if hasattr(self, "external_ref_id") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'payment_type={self.payment_type!s}, '
-                f'client_metadata_id={self.client_metadata_id!s}, '
-                f'token={self.token!s}, '
-                f'identifier={self.identifier!s}, '
-                f'network={self.network!s}, '
+                f'payment_type={(self.payment_type if hasattr(self, "payment_type") else None)!s}, '
+                f'client_metadata_id={(self.client_metadata_id if hasattr(self, "client_metadata_id") else None)!s}, '
+                f'token={(self.token if hasattr(self, "token") else None)!s}, '
+                f'identifier={(self.identifier if hasattr(self, "identifier") else None)!s}, '
+                f'network={(self.network if hasattr(self, "network") else None)!s}, '
                 f'card_identifier={self.card_identifier!s}, '
-                f'odometer={self.odometer!s}, '
-                f'fleet_id={self.fleet_id!s}, '
-                f'external_ref_id={self.external_ref_id!s})')
+                f'odometer={(self.odometer if hasattr(self, "odometer") else None)!s}, '
+                f'fleet_id={(self.fleet_id if hasattr(self, "fleet_id") else None)!s}, '
+                f'external_ref_id={(self.external_ref_id if hasattr(self, "external_ref_id") else None)!s})')

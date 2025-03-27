@@ -13,19 +13,17 @@ class OpeningHour(object):
 
     """Implementation of the 'OpeningHour' model.
 
-    TODO: type model description here.
-
     Attributes:
-        closing_from_hours (str): TODO: type description here.
-        closing_from_minutes (str): TODO: type description here.
-        closing_to_hours (str): TODO: type description here.
-        closing_to_minutes (str): TODO: type description here.
-        from_day (str): TODO: type description here.
-        opening_from_hours (str): TODO: type description here.
-        opening_from_minutes (str): TODO: type description here.
-        opening_to_hours (str): TODO: type description here.
-        opening_to_minutes (str): TODO: type description here.
-        to_day (str): TODO: type description here.
+        closing_from_hours (str): The model property of type str.
+        closing_from_minutes (str): The model property of type str.
+        closing_to_hours (str): The model property of type str.
+        closing_to_minutes (str): The model property of type str.
+        from_day (str): The model property of type str.
+        opening_from_hours (str): The model property of type str.
+        opening_from_minutes (str): The model property of type str.
+        opening_to_hours (str): The model property of type str.
+        opening_to_minutes (str): The model property of type str.
+        to_day (str): The model property of type str.
 
     """
 
@@ -134,26 +132,26 @@ class OpeningHour(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'closing_from_hours={self.closing_from_hours!r}, '
-                f'closing_from_minutes={self.closing_from_minutes!r}, '
-                f'closing_to_hours={self.closing_to_hours!r}, '
-                f'closing_to_minutes={self.closing_to_minutes!r}, '
-                f'from_day={self.from_day!r}, '
-                f'opening_from_hours={self.opening_from_hours!r}, '
-                f'opening_from_minutes={self.opening_from_minutes!r}, '
-                f'opening_to_hours={self.opening_to_hours!r}, '
-                f'opening_to_minutes={self.opening_to_minutes!r}, '
-                f'to_day={self.to_day!r})')
+                f'closing_from_hours={(self.closing_from_hours if hasattr(self, "closing_from_hours") else None)!r}, '
+                f'closing_from_minutes={(self.closing_from_minutes if hasattr(self, "closing_from_minutes") else None)!r}, '
+                f'closing_to_hours={(self.closing_to_hours if hasattr(self, "closing_to_hours") else None)!r}, '
+                f'closing_to_minutes={(self.closing_to_minutes if hasattr(self, "closing_to_minutes") else None)!r}, '
+                f'from_day={(self.from_day if hasattr(self, "from_day") else None)!r}, '
+                f'opening_from_hours={(self.opening_from_hours if hasattr(self, "opening_from_hours") else None)!r}, '
+                f'opening_from_minutes={(self.opening_from_minutes if hasattr(self, "opening_from_minutes") else None)!r}, '
+                f'opening_to_hours={(self.opening_to_hours if hasattr(self, "opening_to_hours") else None)!r}, '
+                f'opening_to_minutes={(self.opening_to_minutes if hasattr(self, "opening_to_minutes") else None)!r}, '
+                f'to_day={(self.to_day if hasattr(self, "to_day") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'closing_from_hours={self.closing_from_hours!s}, '
-                f'closing_from_minutes={self.closing_from_minutes!s}, '
-                f'closing_to_hours={self.closing_to_hours!s}, '
-                f'closing_to_minutes={self.closing_to_minutes!s}, '
-                f'from_day={self.from_day!s}, '
-                f'opening_from_hours={self.opening_from_hours!s}, '
-                f'opening_from_minutes={self.opening_from_minutes!s}, '
-                f'opening_to_hours={self.opening_to_hours!s}, '
-                f'opening_to_minutes={self.opening_to_minutes!s}, '
-                f'to_day={self.to_day!s})')
+                f'closing_from_hours={(self.closing_from_hours if hasattr(self, "closing_from_hours") else None)!s}, '
+                f'closing_from_minutes={(self.closing_from_minutes if hasattr(self, "closing_from_minutes") else None)!s}, '
+                f'closing_to_hours={(self.closing_to_hours if hasattr(self, "closing_to_hours") else None)!s}, '
+                f'closing_to_minutes={(self.closing_to_minutes if hasattr(self, "closing_to_minutes") else None)!s}, '
+                f'from_day={(self.from_day if hasattr(self, "from_day") else None)!s}, '
+                f'opening_from_hours={(self.opening_from_hours if hasattr(self, "opening_from_hours") else None)!s}, '
+                f'opening_from_minutes={(self.opening_from_minutes if hasattr(self, "opening_from_minutes") else None)!s}, '
+                f'opening_to_hours={(self.opening_to_hours if hasattr(self, "opening_to_hours") else None)!s}, '
+                f'opening_to_minutes={(self.opening_to_minutes if hasattr(self, "opening_to_minutes") else None)!s}, '
+                f'to_day={(self.to_day if hasattr(self, "to_day") else None)!s})')

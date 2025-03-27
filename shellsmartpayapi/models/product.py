@@ -13,12 +13,10 @@ class Product(object):
 
     """Implementation of the 'Product' model.
 
-    TODO: type model description here.
-
     Attributes:
-        product_id (str): TODO: type description here.
-        product_name (str): TODO: type description here.
-        unit_price (float): TODO: type description here.
+        product_id (str): The model property of type str.
+        product_name (str): The model property of type str.
+        unit_price (float): The model property of type float.
 
     """
 
@@ -78,12 +76,12 @@ class Product(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'product_id={self.product_id!r}, '
-                f'product_name={self.product_name!r}, '
-                f'unit_price={self.unit_price!r})')
+                f'product_id={(self.product_id if hasattr(self, "product_id") else None)!r}, '
+                f'product_name={(self.product_name if hasattr(self, "product_name") else None)!r}, '
+                f'unit_price={(self.unit_price if hasattr(self, "unit_price") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'product_id={self.product_id!s}, '
-                f'product_name={self.product_name!s}, '
-                f'unit_price={self.unit_price!s})')
+                f'product_id={(self.product_id if hasattr(self, "product_id") else None)!s}, '
+                f'product_name={(self.product_name if hasattr(self, "product_name") else None)!s}, '
+                f'unit_price={(self.unit_price if hasattr(self, "unit_price") else None)!s})')

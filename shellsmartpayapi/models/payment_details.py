@@ -83,12 +83,12 @@ class PaymentDetails(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'payment_category={self.payment_category!r}, '
+                f'payment_category={(self.payment_category if hasattr(self, "payment_category") else None)!r}, '
                 f'payment_method_id={self.payment_method_id!r}, '
                 f'payment_properties={self.payment_properties!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'payment_category={self.payment_category!s}, '
+                f'payment_category={(self.payment_category if hasattr(self, "payment_category") else None)!s}, '
                 f'payment_method_id={self.payment_method_id!s}, '
                 f'payment_properties={self.payment_properties!s})')

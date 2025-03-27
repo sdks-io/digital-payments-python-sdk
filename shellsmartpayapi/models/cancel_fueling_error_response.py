@@ -97,12 +97,12 @@ class CancelFuelingErrorResponse(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'error_code={self.error_code!r}, '
-                f'error_description={self.error_description!r}, '
-                f'errors={self.errors!r})')
+                f'error_code={(self.error_code if hasattr(self, "error_code") else None)!r}, '
+                f'error_description={(self.error_description if hasattr(self, "error_description") else None)!r}, '
+                f'errors={(self.errors if hasattr(self, "errors") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'error_code={self.error_code!s}, '
-                f'error_description={self.error_description!s}, '
-                f'errors={self.errors!s})')
+                f'error_code={(self.error_code if hasattr(self, "error_code") else None)!s}, '
+                f'error_description={(self.error_description if hasattr(self, "error_description") else None)!s}, '
+                f'errors={(self.errors if hasattr(self, "errors") else None)!s})')

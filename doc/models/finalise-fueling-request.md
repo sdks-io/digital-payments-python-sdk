@@ -10,7 +10,7 @@
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
 | `site_name` | `str` | Optional | - |
-| `timestamp` | `long\|int` | Optional | - |
+| `timestamp` | `int` | Optional | - |
 | `volume_quantity` | `float` | Optional | - |
 | `volume_unit` | `str` | Optional | - |
 | `final_price` | `float` | Optional | - |

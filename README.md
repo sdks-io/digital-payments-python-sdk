@@ -7,15 +7,15 @@ The APIs detailed within this document will enable Shell's Fleet Solutions Custo
 
 ## Install the Package
 
-The package is compatible with Python versions `3 >=3.7, <= 3.11`.
+The package is compatible with Python versions `3.7+`.
 Install the package from PyPi using the following pip command:
 
 ```bash
-pip install digital-payments-sdk==1.1.0
+pip install digital-payments-sdk==1.2.0
 ```
 
 You can also view the package at:
-https://pypi.python.org/pypi/digital-payments-sdk/1.1.0
+https://pypi.python.org/pypi/digital-payments-sdk/1.2.0
 
 ## Test the SDK
 
@@ -30,7 +30,7 @@ pytest
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
@@ -45,8 +45,8 @@ The following parameters are configurable for the API Client:
 | `backoff_factor` | `float` | A backoff factor to apply between attempts after the second try. <br> **Default: 2** |
 | `retry_statuses` | `Array of int` | The http statuses on which retry is to be done. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
 | `retry_methods` | `Array of string` | The http methods on which retry is to be done. <br> **Default: ['GET', 'PUT']** |
-| `mpp_token_credentials` | [`MppTokenCredentials`](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/auth/custom-header-signature.md) | The credential object for Custom Header Signature |
-| `o_auth_token_post_credentials` | [`OAuthTokenPostCredentials`](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/auth/custom-header-signature-1.md) | The credential object for Custom Header Signature |
+| `mpp_token_credentials` | [`MppTokenCredentials`](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/auth/custom-header-signature.md) | The credential object for Custom Header Signature |
+| `o_auth_token_post_credentials` | [`OAuthTokenPostCredentials`](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/auth/custom-header-signature-1.md) | The credential object for Custom Header Signature |
 
 The API client can be initialized as follows:
 
@@ -77,20 +77,20 @@ The SDK can be configured to use a different environment for making API calls. A
 
 This API uses the following authentication schemes.
 
-* [`MppToken (Custom Header Signature)`](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/auth/custom-header-signature.md)
-* [`oAuthTokenPost (Custom Header Signature)`](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/auth/custom-header-signature-1.md)
+* [`MppToken (Custom Header Signature)`](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/auth/custom-header-signature.md)
+* [`oAuthTokenPost (Custom Header Signature)`](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/auth/custom-header-signature-1.md)
 
 ## List of APIs
 
-* [Shell API Platform Security Authentication](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/controllers/shell-api-platform-security-authentication.md)
-* [Digital Payment Enablement](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/controllers/digital-payment-enablement.md)
-* [Station Locator](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/controllers/station-locator.md)
-* [Partner Notification](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/controllers/partner-notification.md)
-* [Fueling](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/controllers/fueling.md)
+* [Shell API Platform Security Authentication](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/controllers/shell-api-platform-security-authentication.md)
+* [Digital Payment Enablement](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/controllers/digital-payment-enablement.md)
+* [Station Locator](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/controllers/station-locator.md)
+* [Partner Notification](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/controllers/partner-notification.md)
+* [Fueling](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/controllers/fueling.md)
 
 ## Classes Documentation
 
-* [Utility Classes](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/utility-classes.md)
-* [HttpResponse](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/http-response.md)
-* [HttpRequest](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.1.0/doc/http-request.md)
+* [Utility Classes](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/utility-classes.md)
+* [HttpResponse](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/http-response.md)
+* [HttpRequest](https://www.github.com/sdks-io/digital-payments-python-sdk/tree/1.2.0/doc/http-request.md)
 

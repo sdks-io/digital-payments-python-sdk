@@ -17,7 +17,7 @@ class FaultResponse(object):
     An error response.
 
     Attributes:
-        fault (Fault): TODO: type description here.
+        fault (Fault): The model property of type Fault.
 
     """
 
@@ -63,8 +63,8 @@ class FaultResponse(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'fault={self.fault!r})')
+                f'fault={(self.fault if hasattr(self, "fault") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'fault={self.fault!s})')
+                f'fault={(self.fault if hasattr(self, "fault") else None)!s})')

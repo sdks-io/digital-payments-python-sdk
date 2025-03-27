@@ -13,13 +13,11 @@ class MppAccesTokenResponse(object):
 
     """Implementation of the 'MppAccesTokenResponse' model.
 
-    TODO: type model description here.
-
     Attributes:
         access_token (str): It is the token used in the requests that required
             to authenticate an user.
         token_type (str): type of token provided
-        expires_in (long|int): validity of the access token in seconds
+        expires_in (int): validity of the access token in seconds
         scope (str): scope for the authentication protocol
 
     """
@@ -85,14 +83,14 @@ class MppAccesTokenResponse(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'access_token={self.access_token!r}, '
-                f'token_type={self.token_type!r}, '
-                f'expires_in={self.expires_in!r}, '
-                f'scope={self.scope!r})')
+                f'access_token={(self.access_token if hasattr(self, "access_token") else None)!r}, '
+                f'token_type={(self.token_type if hasattr(self, "token_type") else None)!r}, '
+                f'expires_in={(self.expires_in if hasattr(self, "expires_in") else None)!r}, '
+                f'scope={(self.scope if hasattr(self, "scope") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'access_token={self.access_token!s}, '
-                f'token_type={self.token_type!s}, '
-                f'expires_in={self.expires_in!s}, '
-                f'scope={self.scope!s})')
+                f'access_token={(self.access_token if hasattr(self, "access_token") else None)!s}, '
+                f'token_type={(self.token_type if hasattr(self, "token_type") else None)!s}, '
+                f'expires_in={(self.expires_in if hasattr(self, "expires_in") else None)!s}, '
+                f'scope={(self.scope if hasattr(self, "scope") else None)!s})')

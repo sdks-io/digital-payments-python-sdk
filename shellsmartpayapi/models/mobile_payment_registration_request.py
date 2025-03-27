@@ -13,8 +13,6 @@ class MobilePaymentRegistrationRequest(object):
 
     """Implementation of the 'MobilePaymentRegistrationRequest' model.
 
-    TODO: type model description here.
-
     Attributes:
         reference_id (str): Unique Reference ID the DPAN is registered to. The
             Reference ID has been implemented to accept normal alphanumeric

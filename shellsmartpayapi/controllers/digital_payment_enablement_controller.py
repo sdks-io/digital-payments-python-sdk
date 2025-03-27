@@ -38,8 +38,8 @@ class DigitalPaymentEnablementController(BaseController):
         is the key to obtaining and managing the payment details later.
 
         Args:
-            body (MobilePaymentRegistrationRequest): TODO: type description
-                here.
+            body (MobilePaymentRegistrationRequest): The request body
+                parameter.
 
         Returns:
             PaymentEnablementResponse: Response from the API. OK

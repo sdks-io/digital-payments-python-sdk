@@ -35,9 +35,10 @@ class StationLocatorControllerTests(ControllerTestBase):
         n = None
         amenities = None
         countries = None
+        mtype = None
 
         # Perform the API call through the SDK function
-        result = self.controller.stationlocator_v_1_stations_get_around_location(m, lon, lat, radius, offer_code, n, amenities, countries)
+        result = self.controller.stationlocator_v_1_stations_get_around_location(m, lon, lat, radius, offer_code, n, amenities, countries, mtype)
 
         # Test response code
         assert self.response_catcher.response.status_code == 200

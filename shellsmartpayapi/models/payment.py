@@ -13,12 +13,10 @@ class Payment(object):
 
     """Implementation of the 'Payment' model.
 
-    TODO: type model description here.
-
     Attributes:
-        method (str): TODO: type description here.
-        card_id (str): TODO: type description here.
-        card_last_digits (str): TODO: type description here.
+        method (str): The model property of type str.
+        card_id (str): The model property of type str.
+        card_last_digits (str): The model property of type str.
 
     """
 
@@ -78,12 +76,12 @@ class Payment(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'method={self.method!r}, '
-                f'card_id={self.card_id!r}, '
-                f'card_last_digits={self.card_last_digits!r})')
+                f'method={(self.method if hasattr(self, "method") else None)!r}, '
+                f'card_id={(self.card_id if hasattr(self, "card_id") else None)!r}, '
+                f'card_last_digits={(self.card_last_digits if hasattr(self, "card_last_digits") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'method={self.method!s}, '
-                f'card_id={self.card_id!s}, '
-                f'card_last_digits={self.card_last_digits!s})')
+                f'method={(self.method if hasattr(self, "method") else None)!s}, '
+                f'card_id={(self.card_id if hasattr(self, "card_id") else None)!s}, '
+                f'card_last_digits={(self.card_last_digits if hasattr(self, "card_last_digits") else None)!s})')

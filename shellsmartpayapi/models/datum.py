@@ -15,8 +15,6 @@ class Datum(object):
 
     """Implementation of the 'Datum' model.
 
-    TODO: type model description here.
-
     Attributes:
         id (str): The station’s unique site identifier – this must be ignored
         mtype (int): All fuel stations are of at least one Type, indicating
@@ -217,36 +215,36 @@ class Datum(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'id={self.id!r}, '
-                f'mtype={self.mtype!r}, '
-                f'name={self.name!r}, '
-                f'addr={self.addr!r}, '
-                f'lat={self.lat!r}, '
-                f'lon={self.lon!r}, '
-                f'amen={self.amen!r}, '
-                f'fuel={self.fuel!r}, '
-                f'loc={self.loc!r}, '
-                f'mpp_station_id={self.mpp_station_id!r}, '
-                f'double_site_id={self.double_site_id!r}, '
-                f'opening_hours={self.opening_hours!r}, '
-                f'telephone={self.telephone!r}, '
-                f'authorisation_code={self.authorisation_code!r}, '
-                f'mp_preauth={self.mp_preauth!r})')
+                f'id={(self.id if hasattr(self, "id") else None)!r}, '
+                f'mtype={(self.mtype if hasattr(self, "mtype") else None)!r}, '
+                f'name={(self.name if hasattr(self, "name") else None)!r}, '
+                f'addr={(self.addr if hasattr(self, "addr") else None)!r}, '
+                f'lat={(self.lat if hasattr(self, "lat") else None)!r}, '
+                f'lon={(self.lon if hasattr(self, "lon") else None)!r}, '
+                f'amen={(self.amen if hasattr(self, "amen") else None)!r}, '
+                f'fuel={(self.fuel if hasattr(self, "fuel") else None)!r}, '
+                f'loc={(self.loc if hasattr(self, "loc") else None)!r}, '
+                f'mpp_station_id={(self.mpp_station_id if hasattr(self, "mpp_station_id") else None)!r}, '
+                f'double_site_id={(self.double_site_id if hasattr(self, "double_site_id") else None)!r}, '
+                f'opening_hours={(self.opening_hours if hasattr(self, "opening_hours") else None)!r}, '
+                f'telephone={(self.telephone if hasattr(self, "telephone") else None)!r}, '
+                f'authorisation_code={(self.authorisation_code if hasattr(self, "authorisation_code") else None)!r}, '
+                f'mp_preauth={(self.mp_preauth if hasattr(self, "mp_preauth") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'id={self.id!s}, '
-                f'mtype={self.mtype!s}, '
-                f'name={self.name!s}, '
-                f'addr={self.addr!s}, '
-                f'lat={self.lat!s}, '
-                f'lon={self.lon!s}, '
-                f'amen={self.amen!s}, '
-                f'fuel={self.fuel!s}, '
-                f'loc={self.loc!s}, '
-                f'mpp_station_id={self.mpp_station_id!s}, '
-                f'double_site_id={self.double_site_id!s}, '
-                f'opening_hours={self.opening_hours!s}, '
-                f'telephone={self.telephone!s}, '
-                f'authorisation_code={self.authorisation_code!s}, '
-                f'mp_preauth={self.mp_preauth!s})')
+                f'id={(self.id if hasattr(self, "id") else None)!s}, '
+                f'mtype={(self.mtype if hasattr(self, "mtype") else None)!s}, '
+                f'name={(self.name if hasattr(self, "name") else None)!s}, '
+                f'addr={(self.addr if hasattr(self, "addr") else None)!s}, '
+                f'lat={(self.lat if hasattr(self, "lat") else None)!s}, '
+                f'lon={(self.lon if hasattr(self, "lon") else None)!s}, '
+                f'amen={(self.amen if hasattr(self, "amen") else None)!s}, '
+                f'fuel={(self.fuel if hasattr(self, "fuel") else None)!s}, '
+                f'loc={(self.loc if hasattr(self, "loc") else None)!s}, '
+                f'mpp_station_id={(self.mpp_station_id if hasattr(self, "mpp_station_id") else None)!s}, '
+                f'double_site_id={(self.double_site_id if hasattr(self, "double_site_id") else None)!s}, '
+                f'opening_hours={(self.opening_hours if hasattr(self, "opening_hours") else None)!s}, '
+                f'telephone={(self.telephone if hasattr(self, "telephone") else None)!s}, '
+                f'authorisation_code={(self.authorisation_code if hasattr(self, "authorisation_code") else None)!s}, '
+                f'mp_preauth={(self.mp_preauth if hasattr(self, "mp_preauth") else None)!s})')

@@ -101,18 +101,18 @@ class Loc(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'street={self.street!r}, '
-                f'pc={self.pc!r}, '
-                f'city={self.city!r}, '
-                f'region={self.region!r}, '
+                f'street={(self.street if hasattr(self, "street") else None)!r}, '
+                f'pc={(self.pc if hasattr(self, "pc") else None)!r}, '
+                f'city={(self.city if hasattr(self, "city") else None)!r}, '
+                f'region={(self.region if hasattr(self, "region") else None)!r}, '
                 f'country={self.country!r}, '
                 f'ccode={self.ccode!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'street={self.street!s}, '
-                f'pc={self.pc!s}, '
-                f'city={self.city!s}, '
-                f'region={self.region!s}, '
+                f'street={(self.street if hasattr(self, "street") else None)!s}, '
+                f'pc={(self.pc if hasattr(self, "pc") else None)!s}, '
+                f'city={(self.city if hasattr(self, "city") else None)!s}, '
+                f'region={(self.region if hasattr(self, "region") else None)!s}, '
                 f'country={self.country!s}, '
                 f'ccode={self.ccode!s})')

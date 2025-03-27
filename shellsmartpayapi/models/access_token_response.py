@@ -13,8 +13,6 @@ class AccessTokenResponse(object):
 
     """Implementation of the 'AccessTokenResponse' model.
 
-    TODO: type model description here.
-
     Attributes:
         access_token (str): It is the token used for the requests that
             required an authenticated user. This will be used for all the
@@ -79,12 +77,12 @@ class AccessTokenResponse(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'access_token={self.access_token!r}, '
-                f'expires_in={self.expires_in!r}, '
-                f'token_type={self.token_type!r})')
+                f'access_token={(self.access_token if hasattr(self, "access_token") else None)!r}, '
+                f'expires_in={(self.expires_in if hasattr(self, "expires_in") else None)!r}, '
+                f'token_type={(self.token_type if hasattr(self, "token_type") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'access_token={self.access_token!s}, '
-                f'expires_in={self.expires_in!s}, '
-                f'token_type={self.token_type!s})')
+                f'access_token={(self.access_token if hasattr(self, "access_token") else None)!s}, '
+                f'expires_in={(self.expires_in if hasattr(self, "expires_in") else None)!s}, '
+                f'token_type={(self.token_type if hasattr(self, "token_type") else None)!s})')

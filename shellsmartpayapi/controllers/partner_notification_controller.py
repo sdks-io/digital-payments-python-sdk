@@ -96,8 +96,8 @@ class PartnerNotificationController(BaseController):
         transaction. Note this needs to be implemented over HTTPS
 
         Args:
-            body (FinaliseFuelingRequest, optional): TODO: type description
-                here.
+            body (FinaliseFuelingRequest, optional): The request body
+                parameter.
 
         Returns:
             void: Response from the API. OK
@@ -131,7 +131,7 @@ class PartnerNotificationController(BaseController):
         be implemented over HTTPS
 
         Args:
-            body (CancelFuelingRequest, optional): TODO: type description here.
+            body (CancelFuelingRequest, optional): The request body parameter.
 
         Returns:
             void: Response from the API. OK

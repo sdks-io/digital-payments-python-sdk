@@ -107,7 +107,7 @@ class FuelingController(BaseController):
         Args:
             site_country (str): Country ISO code
             currency (str): Currency ISO code
-            body (PrepareFuelingRequest): TODO: type description here.
+            body (PrepareFuelingRequest): The request body parameter.
 
         Returns:
             PrepareFuelingResponse: Response from the API. OK

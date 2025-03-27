@@ -16,8 +16,6 @@ class PrepareFuelingRequest(object):
 
     """Implementation of the 'PrepareFuelingRequest' model.
 
-    TODO: type model description here.
-
     Attributes:
         latitude (float): The user’s current latitude
         longitude (float): The user’s current longitude
@@ -158,24 +156,24 @@ class PrepareFuelingRequest(object):
         return (f'{self.__class__.__name__}('
                 f'latitude={self.latitude!r}, '
                 f'longitude={self.longitude!r}, '
-                f'maximum_fueling_amount={self.maximum_fueling_amount!r}, '
+                f'maximum_fueling_amount={(self.maximum_fueling_amount if hasattr(self, "maximum_fueling_amount") else None)!r}, '
                 f'station_id={self.station_id!r}, '
                 f'pump_id={self.pump_id!r}, '
-                f'loyalty_details={self.loyalty_details!r}, '
+                f'loyalty_details={(self.loyalty_details if hasattr(self, "loyalty_details") else None)!r}, '
                 f'source_application={self.source_application!r}, '
-                f'device_type={self.device_type!r}, '
+                f'device_type={(self.device_type if hasattr(self, "device_type") else None)!r}, '
                 f'payment_details={self.payment_details!r}, '
-                f'device_details={self.device_details!r})')
+                f'device_details={(self.device_details if hasattr(self, "device_details") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
                 f'latitude={self.latitude!s}, '
                 f'longitude={self.longitude!s}, '
-                f'maximum_fueling_amount={self.maximum_fueling_amount!s}, '
+                f'maximum_fueling_amount={(self.maximum_fueling_amount if hasattr(self, "maximum_fueling_amount") else None)!s}, '
                 f'station_id={self.station_id!s}, '
                 f'pump_id={self.pump_id!s}, '
-                f'loyalty_details={self.loyalty_details!s}, '
+                f'loyalty_details={(self.loyalty_details if hasattr(self, "loyalty_details") else None)!s}, '
                 f'source_application={self.source_application!s}, '
-                f'device_type={self.device_type!s}, '
+                f'device_type={(self.device_type if hasattr(self, "device_type") else None)!s}, '
                 f'payment_details={self.payment_details!s}, '
-                f'device_details={self.device_details!s})')
+                f'device_details={(self.device_details if hasattr(self, "device_details") else None)!s})')

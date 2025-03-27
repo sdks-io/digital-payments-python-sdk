@@ -13,8 +13,6 @@ class MppError(object):
 
     """Implementation of the 'MppError' model.
 
-    TODO: type model description here.
-
     Attributes:
         message (str): Descriptive, human readable error message. Description
             of the error (e.g. This field is required and must to be between 1
@@ -99,16 +97,16 @@ class MppError(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'message={self.message!r}, '
-                f'reason={self.reason!r}, '
-                f'subject={self.subject!r}, '
-                f'subject_type={self.subject_type!r}, '
-                f'mtype={self.mtype!r})')
+                f'message={(self.message if hasattr(self, "message") else None)!r}, '
+                f'reason={(self.reason if hasattr(self, "reason") else None)!r}, '
+                f'subject={(self.subject if hasattr(self, "subject") else None)!r}, '
+                f'subject_type={(self.subject_type if hasattr(self, "subject_type") else None)!r}, '
+                f'mtype={(self.mtype if hasattr(self, "mtype") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'message={self.message!s}, '
-                f'reason={self.reason!s}, '
-                f'subject={self.subject!s}, '
-                f'subject_type={self.subject_type!s}, '
-                f'mtype={self.mtype!s})')
+                f'message={(self.message if hasattr(self, "message") else None)!s}, '
+                f'reason={(self.reason if hasattr(self, "reason") else None)!s}, '
+                f'subject={(self.subject if hasattr(self, "subject") else None)!s}, '
+                f'subject_type={(self.subject_type if hasattr(self, "subject_type") else None)!s}, '
+                f'mtype={(self.mtype if hasattr(self, "mtype") else None)!s})')

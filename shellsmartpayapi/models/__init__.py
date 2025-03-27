@@ -23,4 +23,5 @@ __all__ = [
     'opening_hour',
     'payment',
     'product',
+    'type_enum',
 ]

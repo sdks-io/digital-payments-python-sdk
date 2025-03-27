@@ -75,9 +75,9 @@ class PrepareFuelingResponse(object):
     def __repr__(self):
         return (f'{self.__class__.__name__}('
                 f'mpp_transaction_id={self.mpp_transaction_id!r}, '
-                f'products={self.products!r})')
+                f'products={(self.products if hasattr(self, "products") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
                 f'mpp_transaction_id={self.mpp_transaction_id!s}, '
-                f'products={self.products!s})')
+                f'products={(self.products if hasattr(self, "products") else None)!s})')

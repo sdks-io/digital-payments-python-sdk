@@ -13,11 +13,9 @@ class CancelFuelingRequest(object):
 
     """Implementation of the 'cancelFuelingRequest' model.
 
-    TODO: type model description here.
-
     Attributes:
-        mpp_transaction_id (str): TODO: type description here.
-        reason_code (str): TODO: type description here.
+        mpp_transaction_id (str): The model property of type str.
+        reason_code (str): The model property of type str.
 
     """
 
@@ -70,10 +68,10 @@ class CancelFuelingRequest(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'mpp_transaction_id={self.mpp_transaction_id!r}, '
-                f'reason_code={self.reason_code!r})')
+                f'mpp_transaction_id={(self.mpp_transaction_id if hasattr(self, "mpp_transaction_id") else None)!r}, '
+                f'reason_code={(self.reason_code if hasattr(self, "reason_code") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'mpp_transaction_id={self.mpp_transaction_id!s}, '
-                f'reason_code={self.reason_code!s})')
+                f'mpp_transaction_id={(self.mpp_transaction_id if hasattr(self, "mpp_transaction_id") else None)!s}, '
+                f'reason_code={(self.reason_code if hasattr(self, "reason_code") else None)!s})')

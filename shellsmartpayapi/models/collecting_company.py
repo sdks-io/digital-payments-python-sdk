@@ -12,8 +12,6 @@ class CollectingCompany(object):
 
     """Implementation of the 'CollectingCompany' model.
 
-    TODO: type model description here.
-
     Attributes:
         col_co_id (str): The ID of the Collecting Company (in GFN), also known
             as Shell Code of the selected payer. This property is mandatory if

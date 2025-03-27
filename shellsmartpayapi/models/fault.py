@@ -14,11 +14,9 @@ class Fault(object):
 
     """Implementation of the 'Fault' model.
 
-    TODO: type model description here.
-
     Attributes:
         faultstring (str): The description of the error.
-        detail (Detail): TODO: type description here.
+        detail (Detail): The model property of type Detail.
 
     """
 
@@ -71,10 +69,10 @@ class Fault(object):
 
     def __repr__(self):
         return (f'{self.__class__.__name__}('
-                f'faultstring={self.faultstring!r}, '
-                f'detail={self.detail!r})')
+                f'faultstring={(self.faultstring if hasattr(self, "faultstring") else None)!r}, '
+                f'detail={(self.detail if hasattr(self, "detail") else None)!r})')
 
     def __str__(self):
         return (f'{self.__class__.__name__}('
-                f'faultstring={self.faultstring!s}, '
-                f'detail={self.detail!s})')
+                f'faultstring={(self.faultstring if hasattr(self, "faultstring") else None)!s}, '
+                f'detail={(self.detail if hasattr(self, "detail") else None)!s})')
